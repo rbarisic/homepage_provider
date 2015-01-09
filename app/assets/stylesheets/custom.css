@@ -1,0 +1,21 @@
+.screenshot {
+	height: 20px;
+}
+
+hr {
+	color: #724836;
+	border: none;
+	border-bottom: 1px solid #bbb;
+}
+
+.clear-container {
+	clear: both;
+}
+
+.pull-left {
+	float: left;
+}
+
+.pull-right {
+	float: right;
+}

@@ -1,0 +1,103 @@
+// Place all the styles related to the welcome controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com
+
+.splash-video {
+	position: fixed;
+	left: 0;
+	right: 0;
+	top: 0;
+	min-width: 100%;
+	min-height: 100%;
+	width: auto;
+	height: auto;
+	z-index: -100;
+	background: url('background.jpg') no-repeat;
+	background-size: cover;
+}
+
+.content-wrapper {
+  position: absolute;
+  width: 100%;
+  z-index: 2;
+  top: 100vh;  
+}
+
+.welcome-container {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	overflow: hidden;
+}
+
+.scroll-for-more {
+	position: fixed;
+	color: white;
+	text-align: center;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+	bottom: 1em;
+	z-index: 1;
+}
+
+.window-focus {
+
+	color: white;
+	margin-top: 1em;
+
+	h1 {
+		font-size: 300%;
+	}
+	h2 {
+		font-weight: 300;
+		font-size: 200%;
+	}
+	h1,h2,h3 {
+	line-height: 1.3em;
+	}
+}
+
+.text-center {
+	text-align: center;
+}
+
+.container {
+	width: 100%;
+	padding: 0;
+	margin: 0;
+
+	padding-top: 2em;
+}
+
+.container.white {
+	background-color: white;
+}
+
+.container.fullscreen {
+	height: 100vh;
+}
+
+.center {
+	padding-top: 10vh;
+	padding-bottom: 25vh;
+	position: relative;
+	left: 25%;
+	width: 50%;
+}
+
+.text-white {
+	color: white;
+}
+
+@media screen and (min-width: 48em) {
+	.window-focus {
+		max-width: 50%;
+		margin: 0 auto;
+		margin-top: 20vh;
+		background: rgba(0,0,0,0.5);
+		padding: 2em;
+		border-radius: 2em;
+	}	
+}

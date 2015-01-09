@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Content:</strong>
+  <%= @homepage.Content %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @homepage.User %>
+</p>
+
+<%= link_to 'Edit', edit_homepage_path(@homepage) %> |
+<%= link_to 'Back', homepages_path %>

@@ -1,0 +1,14 @@
+.pure-button-lead {
+	font-size: 1.5em !important;
+	color: white !important;
+	background-color: #724836 !important;
+	margin: 0.5em;
+}
+
+.pure-button-catch {
+	background-color: #80BFB7 !important;
+}
+
+.l-box {
+	padding: 1em;
+}
