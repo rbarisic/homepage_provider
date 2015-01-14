@@ -14,8 +14,7 @@
   <tbody>
     <% @homepages.each do |homepage| %>
       <tr>
-        <td><%= homepage.Content %></td>
-        <td><%= homepage.User %></td>
+        <td><%= homepage.account.nickname || homepage.account.first_name || '???' %></td>
         <td><%= link_to 'Show', account_homepage_path(homepage) %></td>
         <td><%= link_to 'Edit', edit_account_homepage_path(homepage) %></td>
         <td><%= link_to 'Reset', account_homepage_path(homepage), method: :delete, data: { confirm: 'Are you sure?' } %></td>

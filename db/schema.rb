@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150114141658) do
+ActiveRecord::Schema.define(version: 20150114142443) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -26,6 +26,7 @@ ActiveRecord::Schema.define(version: 20150114141658) do
     t.boolean  "account_type"
     t.date     "birthday"
     t.string   "paypal_address"
+    t.string   "nickname"
   end
 
   add_index "accounts", ["homepage_id"], name: "index_accounts_on_homepage_id", using: :btree

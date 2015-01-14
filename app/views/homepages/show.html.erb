@@ -2,8 +2,9 @@
 <p id="notice"><%= notice %></p>
   <%= @homepage.Content.html_safe %>
 <% end %>
-<div>
-  <i>PROUDLY MADE BY <%= @account %></i>
+
+<div id="homepage-creator">
+  <i>PROUDLY MADE BY <%= homepage_creator %></i>
 </div>
 
 <%= link_to 'Edit', edit_account_homepage_path(@homepage) %> |

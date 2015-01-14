@@ -89,6 +89,18 @@
 	height: 100vh;
 }
 
+.container.hero {
+	text-align: center;
+
+	h1 {
+		font-size: 20vh;
+	}
+}
+
+.text-upcase {
+	text-transform: uppercase;
+}
+
 .container.darkened {
 	background: rgba(0,0,0,0.5);	
 }

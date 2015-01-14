@@ -32,6 +32,10 @@
 	</div>
 
 	<%= yield %>
+
+	<% if @footer %>
+		<%= render 'shared/footer' %>
+	<% end %>
 </div>
 </body>
 </html>

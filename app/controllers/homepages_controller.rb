@@ -1,6 +1,7 @@
 class HomepagesController < ApplicationController
   before_action :set_account, only: [:show, :edit, :update, :destroy]
   before_action :set_homepage, only: [:show, :edit, :update, :destroy]
+  # before_action :set_header, only: [:show]
   before_action :set_page_information
   respond_to :html
 
@@ -10,6 +11,11 @@ class HomepagesController < ApplicationController
   end
 
   def show
+
+    if user_is_visitor?
+      @header = false
+      @footer = true 
+    end
   end
 
   def new
@@ -22,9 +28,7 @@ class HomepagesController < ApplicationController
 
   def create
     @homepage = Homepage.new(homepage_params)
-    if @homepage.content == nil
       @homepage.content = '<h1>This is your Homepage!</h1><p>You can edit it through the Homepage Control Panel.</p>'
-    end 
     @homepage.save
     respond_with(@homepage)
   end
@@ -37,6 +41,10 @@ class HomepagesController < ApplicationController
   def destroy
     @homepage.destroy
     respond_with(@homepage)
+  end
+
+  def user_is_visitor?
+    return true if !user_signed_in? || @account.user == current_user
   end
 
   private

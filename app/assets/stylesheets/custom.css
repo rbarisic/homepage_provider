@@ -2,6 +2,7 @@ a {
 	color: #724836;
 	text-decoration: none;
 }
+
 a:hover {
 	color: #FEA178;
 }
@@ -73,3 +74,4 @@ hr {
 
 	color: white;
 	background-color: black;
+}
