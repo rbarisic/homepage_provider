@@ -38,3 +38,19 @@
 .pure-menu li a:hover {
 	color: #222 !important;
 }
+
+.pure-notification {
+	position: fixed;
+	top: 2;
+	left: 0;
+	right: 0;
+
+	color: inherit;
+	background: #FEFBBE;
+	
+	padding: 0.5em;
+	padding-top: 0.8em;
+
+	margin-top: 0;
+	margin-bottom: 2em;
+}
