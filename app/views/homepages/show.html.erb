@@ -3,9 +3,5 @@
   <%= @homepage.Content.html_safe %>
 <% end %>
 
-<div id="homepage-creator">
-  <i>PROUDLY MADE BY <%= homepage_creator %></i>
-</div>
-
 <%= link_to 'Edit', edit_account_homepage_path(@homepage) %> |
 <%= link_to 'Back', homepages_path %>

@@ -44,7 +44,7 @@ class HomepagesController < ApplicationController
   end
 
   def user_is_visitor?
-    return true if !user_signed_in? || @account.user == current_user
+    return true if !user_signed_in? || @account.user != current_user
   end
 
   private
@@ -61,7 +61,7 @@ class HomepagesController < ApplicationController
     end
 
     def set_page_information
-      @page_title = 'Homepage Index'
+      @page_title = 'Homepage'
       @page_icon = 'home'
     end
 end
