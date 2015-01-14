@@ -1,14 +1,10 @@
+<% if @homepage.Content %>
 <p id="notice"><%= notice %></p>
+  <%= @homepage.Content.html_safe %>
+<% end %>
+<div>
+  <i>PROUDLY MADE BY <%= @account %></i>
+</div>
 
-<p>
-  <strong>Content:</strong>
-  <%= @homepage.Content %>
-</p>
-
-<p>
-  <strong>User:</strong>
-  <%= @homepage.User %>
-</p>
-
-<%= link_to 'Edit', edit_homepage_path(@homepage) %> |
+<%= link_to 'Edit', edit_account_homepage_path(@homepage) %> |
 <%= link_to 'Back', homepages_path %>

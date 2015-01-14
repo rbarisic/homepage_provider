@@ -1,3 +1,3 @@
 class Homepage < ActiveRecord::Base
-  belongs_to :User
+	belongs_to :account
 end

@@ -45,6 +45,8 @@ end
 # gem 'debugger', group: [:development, :test]
 
 # les additionales
+gem "font-awesome-rails"
+
 gem 'devise'
 gem 'purecss'
 gem 'pg'

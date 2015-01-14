@@ -1,26 +1,30 @@
 HomepageProvider::Application.routes.draw do
 
+  resources :accounts do
+    resource :homepage
+  end
+  match '/accounts/:id/homepage', to: 'homepages#show', via: 'get', as: 'show_account_homepage'
 
+  match '/homepage/:id', to: 'homepages#show', via: 'get', as: 'show_homepage'
+  match '/homepages/', to: 'homepages#index', via: 'get'
 # root element based on authentication status
 #--------------------------------------------------------------
-  unauthenticated do
-    root :to => 'welcome#index'
-    match '/learn_more', to: 'welcome#learn', via: 'get'
+
+  authenticated :user do
+    root to: 'accounts#index', as: :authenticated_root
   end
 
-  authenticated do
-    root :to => 'dashboard#index'
+  unauthenticated do
+      root :to => 'welcome#index'
+      match '/learn_more', to: 'welcome#learn', via: 'get'
   end
 #--------------------------------------------------------------
-
 
 # devise routes
 #--------------------------------------------------------------
+
   devise_for :users
-
-  resources :homepages
 #--------------------------------------------------------------
-
 
 # static routes
 #--------------------------------------------------------------
@@ -43,7 +47,7 @@ HomepageProvider::Application.routes.draw do
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
 
   # Example resource route (maps HTTP verbs to controller actions automatically):
-  #   resources :products
+  #   reso1/newurces :products
 
   # Example resource route with options:
   #   resources :products do

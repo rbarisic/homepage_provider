@@ -1,3 +1,18 @@
+a {
+	color: #724836;
+	text-decoration: none;
+}
+a:hover {
+	color: #FEA178;
+}
+a:visited {
+	color: #7F503C;
+}
+
+#frame {
+	margin-top: 4em;
+}
+
 .screenshot {
 	height: 20px;
 }
@@ -19,3 +34,42 @@ hr {
 .pull-right {
 	float: right;
 }
+
+.form {
+	position: absolute;
+	top: 20%;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+	width: 50%;
+	max-width: 90%;
+}
+
+.form h1 {
+	font-size: 300%;
+	line-height: 1.2;
+}
+
+.pull-right {
+	float: right;
+}
+
+.text-center {
+	text-align: center;
+}
+
+.text-center.heading {
+	margin: 1em;
+	margin-bottom: 2em;
+}
+
+#page-title {
+	position: relative;
+	top: 0;
+	left: 0;
+	right: 0;
+
+	padding: 1em;
+
+	color: white;
+	background-color: black;

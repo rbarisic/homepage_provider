@@ -1,14 +1,40 @@
 .pure-button-lead {
-	font-size: 1.5em !important;
 	color: white !important;
 	background-color: #724836 !important;
-	margin: 0.5em;
+}
+
+.pure-button-large {
+	font-size: 1.5em !important;
 }
 
 .pure-button-catch {
+	color: white !important;
 	background-color: #80BFB7 !important;
 }
 
 .l-box {
 	padding: 1em;
+}
+
+.pure-menu-heading {
+	color: #fff !important;
+}
+
+#navigation-main {
+	position: fixed;
+	top: 0;
+
+	z-index: 200;
+	font-size: 18px;
+
+	color: white;
+	background-color: #000;
+}
+
+#navigation-main a {
+	color: #fff;
+}
+
+.pure-menu li a:hover {
+	color: #222 !important;
 }

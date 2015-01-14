@@ -15,14 +15,29 @@
 //= require turbolinks
 //= require_tree .
 
-   $(window).scroll(function() {
+var screen_height = window.screen.height;
 
-    if ($(this).scrollTop()>128)
+$(window).scroll(function() {
+
+    if ($(this).scrollTop()>screen_height / 4)
      {
         $('.hide-on-scroll').fadeOut();
      }
     else
      {
       $('.hide-on-scroll').fadeIn();
+     }
+ });
+
+$(window).scroll(function() {
+
+    if ($(this).scrollTop()>screen_height + 10)
+     {
+        $('.splash-background').css('z-index',-99)
+     }
+    else
+     {
+        $('.splash-background').css('z-index',-102)
+
      }
  });

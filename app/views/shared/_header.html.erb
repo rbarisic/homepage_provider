@@ -1,0 +1,27 @@
+<%= render 'shared/navigation_sidebar' %>
+
+<div id="navigation-main" class="pure-menu pure-menu-open pure-menu-horizontal">
+	<button id="menu-button" class="pull-right" onclick="toggleMenu()">
+		<%= fa_icon 'navicon' %>
+	</button>
+	<% unless @back %>
+		<%= link_to 'Site Title', root_path, class: 'pure-menu-heading' %>
+	<% else %>
+		<%= link_to 'Go back', :back, class: 'pure-menu-heading' %>
+	<% end %>
+
+	<%= render 'shared/header_lg' %>
+
+	<% if @page_title %>
+
+		<script>
+			$(function() {
+				$('#frame').css('marginTop', '10em');
+			});
+		</script>
+
+		<div id="page-title">
+			<%= fa_icon "#{@page_icon}", text: @page_title %>
+		</div>
+	<% end %>
+</div>

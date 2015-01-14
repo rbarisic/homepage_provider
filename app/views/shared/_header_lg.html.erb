@@ -1,0 +1,43 @@
+<% if signed_in? %>
+
+	<ul>
+		<li>
+			<%= link_to root_path do %>
+				<%= fa_icon 'star', class: 'fa-fw' %> Best Sites
+			<% end %>
+		</li>
+		<li><%= link_to show_account_homepage_path(current_user) do %>
+				<%= fa_icon 'home', class: 'fa-fw' %> Homepage
+			<% end %>
+		</li>
+		<li><%= link_to account_path(current_user) do %>
+				<%= fa_icon 'info', class: 'fa-fw' %> Account
+			<% end %>
+		</li>
+		<li><%= link_to root_path do %>
+				<%= fa_icon 'dollar', class: 'fa-fw' %> Premium
+			<% end %>
+		</li>
+	</ul>
+
+	<ul class="pull-right">
+		<li>
+			<%= select_tag 'Language', options_for_select(%w(EN DE FR ES IT)) %>
+		</li>
+		<li><%= link_to edit_user_registration_path(current_user) do %>
+			<%= fa_icon 'user', class: 'fa-fw' %>
+			<%= current_user.email %>
+			<% end %>
+		</li>
+		<li>
+			<%= link_to destroy_user_session_path, method: :delete do%>
+				<%= fa_icon 'sign-out', class: 'fa-fw' %> Log Out
+			<% end %>
+		</li>
+	</ul>
+
+<% else %>
+
+	<%= render 'shared/welcome_header' %>
+
+<% end %>

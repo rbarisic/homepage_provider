@@ -11,9 +11,22 @@
 	min-height: 100%;
 	width: auto;
 	height: auto;
-	z-index: -100;
+	z-index: -101;
 	background: url('background.jpg') no-repeat;
 	background-size: cover;
+}
+.splash-background {
+	position: fixed;
+	left: 0;
+	right: 0;
+	top: 0;
+	min-width: 100%;
+	min-height: 100%;
+	width: auto;
+	height: auto;
+	z-index: -102;
+	background: url('background2.jpg') no-repeat;
+	background-size: cover;	
 }
 
 .content-wrapper {
@@ -25,10 +38,11 @@
 
 .welcome-container {
 	position: fixed;
-	top: 0;
+	top: 10vh;
 	left: 0;
 	width: 100%;
 	overflow: hidden;
+	z-index: -100;
 }
 
 .scroll-for-more {
@@ -59,10 +73,6 @@
 	}
 }
 
-.text-center {
-	text-align: center;
-}
-
 .container {
 	width: 100%;
 	padding: 0;
@@ -77,6 +87,10 @@
 
 .container.fullscreen {
 	height: 100vh;
+}
+
+.container.darkened {
+	background: rgba(0,0,0,0.5);	
 }
 
 .center {
@@ -96,8 +110,16 @@
 		max-width: 50%;
 		margin: 0 auto;
 		margin-top: 20vh;
-		background: rgba(0,0,0,0.5);
+		background: rgba(0,0,0,0.6);
 		padding: 2em;
-		border-radius: 2em;
-	}	
+		border-radius: 1em;
+	}
+
+	.welcome-container {
+		position: fixed;
+		top: 1em;
+		left: 0;
+		width: 100%;
+		overflow: hidden;
+	}
 }

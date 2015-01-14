@@ -1,0 +1,95 @@
+<script>
+	function toggleMenu() {
+		if ($('#navigation-sidebar').css('zIndex') == '200') {
+			$('#navigation-sidebar').css('zIndex', '300');
+			$('#navigation-sidebar').css('display', 'block');
+			$('#navigation-sidebar').width('100%');
+		}
+		else {
+			$('#navigation-sidebar').css('zIndex', '200');
+			$('#navigation-sidebar').width('0%');			
+		}
+	}
+</script>
+
+<div id="navigation-sidebar" class="pull-right">
+
+	<h1>Sidebar</h1>
+	<p>Select an option</p>
+<% if signed_in? %>
+	<ul>
+
+		<li>
+			<%= link_to(root_path) do %>
+				<%= fa_icon 'newspaper-o', class: 'fa-fw'  %> News
+			<% end %>
+		</li>
+
+		<li>
+			<%= link_to(root_path) do %>
+				<%= fa_icon 'home', class: 'fa-fw'  %> Homepage
+			<% end %>
+		</li>
+
+		<li>
+			<%= link_to(account_path(current_user)) do %>
+				<%= fa_icon 'info', class: 'fa-fw' %> Account
+			<% end %>
+		</li>
+
+		<li>
+			<%= link_to(root_path) do %>
+				<%= fa_icon 'dollar', class: 'fa-fw'  %> Premium
+			<% end %>
+		</li>
+
+	</ul>
+
+	<h1>Account Information</h1>
+	<p>Logged in as: <b><%= current_user.email %></b></p>
+
+	<ul>
+		<li>
+			<%= link_to(root_path) do %>
+				<%= fa_icon 'cog', class: 'fa-fw'  %> Settings
+			<% end %>
+		</li>
+
+		<li>
+			<%= link_to(edit_user_registration_path(current_user)) do %>
+				<%= fa_icon 'user', class: 'fa-fw'  %> Edit Profile
+			<% end %>
+		</li>
+
+		<li>
+			<%= link_to(destroy_user_session_path, method: :delete) do %>
+				<%= fa_icon 'sign-out', class: 'fa-fw'  %> Log Out
+			<% end %>
+		</li>
+	</ul>
+
+<% else %>
+
+	<ul>
+		<li>
+			<%= link_to(new_user_registration_path) do %>
+				<%= fa_icon 'asterisk', class: 'fa-fw'  %> Create Account
+			<% end %>
+		</li>
+
+		<li>
+			<%= link_to(new_user_session_path) do %>
+				<%= fa_icon 'sign-in', class: 'fa-fw'  %> Sign In
+			<% end %>
+		</li>
+
+	</ul>
+
+<% end %>
+
+	<ul>
+		<li>
+			<a onclick='toggleMenu()' style='cursor: pointer'><%= fa_icon 'close', class: 'fa-fw' %> close me</a>
+		</li>
+	</ul>
+</div>

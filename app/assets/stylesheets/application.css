@@ -11,8 +11,5 @@
  *= require_self
  *= require_tree .
  *= require purecss
+ *= require font-awesome
  */
-
-* {
-	font-family: 'Roboto', sans-serif;
-}
