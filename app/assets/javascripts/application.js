@@ -41,3 +41,15 @@ $(window).scroll(function() {
 
      }
  });
+
+function toggleMenu() {
+    if ($('#navigation-sidebar').css('zIndex') == '200') {
+        $('#navigation-sidebar').css('zIndex', '300');
+        $('#navigation-sidebar').css('display', 'block');
+        $('#navigation-sidebar').width('100%');
+    }
+    else {
+        $('#navigation-sidebar').css('zIndex', '200');
+        $('#navigation-sidebar').width('0%');           
+    }
+}

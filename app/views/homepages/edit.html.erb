@@ -1,6 +1,37 @@
-<h1>Editing homepage</h1>
+<% @header = false %>
+<% stylesheet_link_tag('spooner/base.css') %>
 
-<%= render 'form' %>
 
-<%= link_to 'Show', @homepage %> |
-<%= link_to 'Back', homepages_path %>
+<script>
+	if ($('document').ready) { $('#navigation-main').fadeOut() }
+</script>
+
+<div class="sp-title">
+	<div class="text-center" onload="$(this).fadeOut();">
+		<%= image_tag 'Spooner.png', class: 'spooner-img' %>
+		<h2>Lightweight Website Editor</h2>
+	</div>
+</div>
+<div class="sp-workbench">
+	<%= render 'spooner/toolbar' %>
+</div>
+
+<%= render 'shared/quickmenu' %>
+
+
+
+
+<script>
+	var zMax = 100;
+
+	function spButton(action) {
+		switch(action) {
+			case 'source':
+
+				break;
+			case 'settings':
+
+				break;
+		}
+	}
+</script>

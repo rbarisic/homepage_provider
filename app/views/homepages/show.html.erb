@@ -2,7 +2,7 @@
 
 <% if @homepage.account.user == current_user %>
 	<div class="pure-notification">
-		<%= @notification %>
+		<%= fa_icon 'info', class: 'fa-fw', text: @notification %>
 		<button onclick="$(this).parent('div').remove()">
 			<i class="fa fa-close"></i> Close
 		</button>
@@ -19,5 +19,5 @@
   <%= @homepage.Content.html_safe %>
 <% end %>
 
-<%= link_to 'Edit', edit_account_homepage_path(@homepage) %> |
+<%= link_to 'Edit with <b>Spooner</b>'.html_safe, edit_account_homepage_path(@homepage) %> |
 <%= link_to 'Back', homepages_path %>

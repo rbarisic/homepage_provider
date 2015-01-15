@@ -1,0 +1,73 @@
+.sp-title {
+	position: fixed;
+	top: 0;
+	bottom: 80%;
+	left: 0;
+	right: 0;
+	height: 20%;
+	background-color: #eee;
+	overflow: hidden;
+
+	font-family: 'Ubuntu', sans-serif;
+}
+
+.sp-title h1, h2, h3 {
+	text-transform: none;
+	font-weight: 300;
+}
+
+.sp-workbench {
+	position: fixed;
+	top: 20%;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background-color: #ccc;
+
+	min-width: 320px;
+	min-height: 240px;
+
+	z-index: 100;
+}
+
+.sp-workbench {
+
+}
+
+.sp-toolbar-vertical {
+	display: inline-block;
+	background-color: #999;
+	padding: 4px;
+	font-size: 16px;
+
+	position: absolute;
+	top: 0;
+	bottom: 0;
+}
+
+.sp-toolbar-vertical ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.sp-toolbar-vertical ul li {
+
+	margin-bottom: 4px;
+
+}
+
+.sp-button-tool {
+	font-size: 20px;
+	color: #eee;
+	background: none;
+	border: none;
+	border-radius: 4px;
+	padding: 4px;
+}
+
+.sp-button-tool:hover {
+	color: #BBB;
+	background: rgba(0,0,0,0.2);
+	border: none;
+}
