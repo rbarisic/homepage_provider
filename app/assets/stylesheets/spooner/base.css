@@ -16,7 +16,7 @@
 	font-weight: 300;
 }
 
-.sp-workbench {
+.sp-workbench-container {
 	position: fixed;
 	top: 20%;
 	bottom: 0;
@@ -27,11 +27,28 @@
 	min-width: 320px;
 	min-height: 240px;
 
-	z-index: 100;
+	z-index: 90;
 }
 
 .sp-workbench {
 
+	position: absolute;
+
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+
+	padding: 1em;
+	padding-left: 64px;
+
+	z-index: 100;
+
+	background-color: #fff;
+}
+
+.sp-ui {
+	z-index: 2000;
 }
 
 .sp-toolbar-vertical {
@@ -41,7 +58,7 @@
 	font-size: 16px;
 
 	position: absolute;
-	top: 0;
+	top: 20%;
 	bottom: 0;
 }
 
@@ -67,7 +84,12 @@
 }
 
 .sp-button-tool:hover {
-	color: #BBB;
+	color: #fff;
 	background: rgba(0,0,0,0.2);
 	border: none;
+}
+
+.sp-button-tool:focus {
+	color: #fff;
+	background: rgba(0,0,0,0.4);
 }

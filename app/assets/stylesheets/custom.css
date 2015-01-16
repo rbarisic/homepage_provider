@@ -82,3 +82,16 @@ hr {
 	right: 1em;
 	color: black;
 }
+
+.dock { z-index: 2000;}
+
+.dock.fixed { position: fixed;}
+.dock.absolute { position: absolute;}
+
+.dock.top { top: 1em;}
+
+.dock.right { right: 1em;}
+
+.dock.bottom { bottom: 1em;}
+
+.dock.left { left: 1em;}

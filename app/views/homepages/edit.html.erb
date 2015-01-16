@@ -12,13 +12,39 @@
 		<h2>Lightweight Website Editor</h2>
 	</div>
 </div>
-<div class="sp-workbench">
-	<%= render 'spooner/toolbar' %>
+
+<%= render 'spooner/toolbar' %>
+
+<div class="sp-workbench-container">
+	<div class="sp-workbench" id="sp-wb-source">
+		<h1>Source</h1>
+	</div>
+	<div class="sp-workbench" id="sp-wb-settings">
+		<h1>Settings</h1>
+	</div>
 </div>
 
-<%= render 'shared/quickmenu' %>
+<div class="dock top left fixed" >
+	<%= button_to account_homepage_path, method: 'get', class: 'pure-button' do %>
+		<%= fa_icon 'arrow-circle-left', class: 'fa-fw' %>
+	<% end %>
+</div>
+
+<div class="dock top right fixed">
 
 
+
+	<%= link_to save_homepage_path(@homepage), method: :put, class: 'pure-button pure-button-catch' do %>
+		<%= fa_icon 'save' %>
+	<% end %>
+
+
+
+	<button class="pure-button">
+		<%= fa_icon 'save', class: 'fa-fw' %>
+	</button>	
+	<%= render 'shared/quickmenu' %>
+</div>
 
 
 <script>
@@ -27,10 +53,12 @@
 	function spButton(action) {
 		switch(action) {
 			case 'source':
-
+				zMax = zMax + 1;
+				$('#sp-wb-source').css('zIndex', zMax + 1);
 				break;
 			case 'settings':
-
+				zMax = zMax + 1;
+				$('#sp-wb-settings').css('zIndex', zMax + 1);
 				break;
 		}
 	}

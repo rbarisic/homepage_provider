@@ -7,6 +7,7 @@ HomepageProvider::Application.routes.draw do
 
   match '/homepage/:id', to: 'homepages#show', via: 'get', as: 'show_homepage'
   match '/homepages/', to: 'homepages#index', via: 'get'
+  match '/homepages/:id/', to: 'homepages#update', via: 'put', as: 'save_homepage'
 # root element based on authentication status
 #--------------------------------------------------------------
 
