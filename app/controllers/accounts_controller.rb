@@ -43,7 +43,7 @@ class AccountsController < ApplicationController
     end
 
     def account_params
-      params[:account]
+      params.require(:account).permit(:first_name, :last_name, :nickname, :paypal_address)
     end
 
     def set_page_information

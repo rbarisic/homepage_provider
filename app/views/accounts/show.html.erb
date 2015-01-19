@@ -1,4 +1,13 @@
 <p id="notice"><%= notice %></p>
 
+<% if current_user %>
+	<h2>This is your Account</h2>
+	<p>First Name: <b><%= @account.first_name || 'none' %></b></p>
+	<p>Last Name: <b><%= @account.last_name || 'none' %></b></p>
+	<p>Nickname: <b><%= @account.nickname || 'none' %></b></p>
+	<p>Paypal Address: <b><%= @account.paypal_address || 'none' %></b></p>
+<% else %>
+	<%= @account.user.email %>'s account
+<% end %>
 <%= link_to 'Edit', edit_account_path(@account) %> |
 <%= link_to 'Back', accounts_path %>

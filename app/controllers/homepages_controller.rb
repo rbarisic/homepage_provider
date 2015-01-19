@@ -30,7 +30,6 @@ class HomepagesController < ApplicationController
 
   def create
     @homepage = Homepage.new(homepage_params)
-    @homepage.content = '<h1>Hello, World!</h1><p>This is your homepage. You can use <b>Spooner</b> below to edit it.<br>have fun!</p>'
     @homepage.save
     respond_with(@homepage)
   end

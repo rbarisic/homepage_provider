@@ -35,6 +35,10 @@
 	color: #fff;
 }
 
+#navigation-main a.active {
+	background-color: #80BFB7;
+}
+
 .pure-menu li a:hover {
 	color: #222 !important;
 }

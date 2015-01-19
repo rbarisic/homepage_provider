@@ -12,7 +12,7 @@ class User < ActiveRecord::Base
 
 	private
 		def build_default_account
-		  account = create_account
+		  account = create_account(nickname: self.email)
 		  self.account_id = account.id
 		  save
 		end

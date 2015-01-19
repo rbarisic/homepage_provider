@@ -1,16 +1,20 @@
 <% if signed_in? %>
 
 	<ul>
+		<li><%= link_to accounts_path, class: active(accounts_path) do %>
+				<%= fa_icon 'users', class: 'fa-fw' %> All Users
+			<% end %>
+		</li>
 		<li>
-			<%= link_to homepages_path do %>
+			<%= link_to homepages_path, class: active(homepages_path) do %>
 				<%= fa_icon 'star', class: 'fa-fw' %> Best Sites
 			<% end %>
 		</li>
-		<li><%= link_to show_account_homepage_path(current_user) do %>
+		<li><%= link_to show_account_homepage_path(current_user), class: active(show_account_homepage_path(current_user)) do %>
 				<%= fa_icon 'home', class: 'fa-fw' %> Homepage
 			<% end %>
 		</li>
-		<li><%= link_to account_path(current_user) do %>
+		<li><%= link_to account_path(current_user), class: active(account_path(current_user)) do %>
 				<%= fa_icon 'info', class: 'fa-fw' %> Account
 			<% end %>
 		</li>
@@ -24,7 +28,7 @@
 		<li>
 			<%= select_tag 'Language', options_for_select(%w(EN DE FR ES IT)) %>
 		</li>
-		<li><%= link_to edit_user_registration_path(current_user) do %>
+		<li><%= link_to edit_user_registration_path(current_user), class: active(edit_user_registration_path(current_user)) do %>
 			<%= fa_icon 'user', class: 'fa-fw' %>
 			<%= current_user.email %>
 			<% end %>

@@ -11,6 +11,17 @@
 			<% end %>
 		</li>
 
+		<li><%= link_to accounts_path do %>
+				<%= fa_icon 'users', class: 'fa-fw' %> All Users
+			<% end %>
+		</li>
+		
+		<li>
+			<%= link_to homepages_path do %>
+				<%= fa_icon 'star', class: 'fa-fw' %> Best Sites
+			<% end %>
+		</li>
+
 		<li>
 			<%= link_to(root_path) do %>
 				<%= fa_icon 'home', class: 'fa-fw'  %> Homepage

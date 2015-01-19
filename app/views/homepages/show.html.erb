@@ -17,6 +17,8 @@
 <% if @homepage.content %>
 <p id="notice"><%= notice %></p>
   <%= @homepage.content.html_safe %>
+<% else %>
+<h1>Hello, World!</h1><p>This is your homepage. You can use <b>Spooner</b> below to edit it.<br>have fun!</p>
 <% end %>
 
 <%= link_to 'Edit with <b>Spooner</b>'.html_safe, edit_account_homepage_path(@homepage) %> |

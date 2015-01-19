@@ -12,6 +12,19 @@
   <% end %>
 
   <div class="actions">
+
+    <%= f.label :first_name %><br>
+    <%= f.text_field :first_name %>
+    <br><br>
+    <%= f.label :last_name %><br>
+    <%= f.text_field :last_name %>
+    <br><br>
+    <%= f.label :nickname %><br>
+    <%= f.text_field :nickname, placeholder: 'none' %>
+    <br><br>
+    <%= f.label :paypal_address %><br>
+    <%= f.text_field :paypal_address %>
+    <br><br>
     <%= f.submit %>
   </div>
 <% end %>
